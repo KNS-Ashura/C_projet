@@ -1,0 +1,6 @@
+#ifndef SUPEMON_STRUCT_H_INCLUDED
+#define SUPEMON_STRUCT_H_INCLUDED
+
+int add(int a, int b);
+
+#endif // SUPEMON_STRUCT_H_INCLUDED

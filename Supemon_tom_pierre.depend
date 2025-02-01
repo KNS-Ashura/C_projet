@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1738420557 source:c:\supinfo\1c\supemon_tom_pierre\main.c
+	<stdio.h>
+	<stdlib.h>
+	"structures.h"
+
+1738420657 c:\supinfo\1c\supemon_tom_pierre\structures.h
+
+1738426025 source:c:\supinfo\1c\supemon_tom_pierre\supemon_struct.c
+	"supemon_struct.h"
+
+1738426057 c:\supinfo\1c\supemon_tom_pierre\supemon_struct.h
+
+1738426440 source:c:\supinfo\1c\supemon_tom_pierre\center.c
+
+1738426253 source:c:\supinfo\1c\supemon_tom_pierre\player_struct.c
+	"player_struct.h"
+
+1738426652 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
+
+1738426328 source:c:\supinfo\1c\supemon_tom_pierre\shop.c
+	"shop.h"
+
+1738426652 c:\supinfo\1c\supemon_tom_pierre\shop.h
+
