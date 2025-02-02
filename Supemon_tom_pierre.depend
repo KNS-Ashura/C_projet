@@ -1,25 +1,37 @@
 # depslib dependency file v1.0
-1738420557 source:c:\supinfo\1c\supemon_tom_pierre\main.c
+1738506457 source:c:\supinfo\1c\supemon_tom_pierre\main.c
 	<stdio.h>
 	<stdlib.h>
-	"structures.h"
+	"shop.h"
+	"supemon_struct.h"
+	"player_struct.h"
+	"center.h"
 
 1738420657 c:\supinfo\1c\supemon_tom_pierre\structures.h
 
-1738426025 source:c:\supinfo\1c\supemon_tom_pierre\supemon_struct.c
+1738504575 source:c:\supinfo\1c\supemon_tom_pierre\supemon_struct.c
+	<stdio.h>
+	<stdlib.h>
 	"supemon_struct.h"
 
-1738426057 c:\supinfo\1c\supemon_tom_pierre\supemon_struct.h
+1738506889 c:\supinfo\1c\supemon_tom_pierre\supemon_struct.h
 
-1738426440 source:c:\supinfo\1c\supemon_tom_pierre\center.c
+1738503550 source:c:\supinfo\1c\supemon_tom_pierre\center.c
+	<stdio.h>
+	<stdlib.h>
+	"center.h"
 
 1738426253 source:c:\supinfo\1c\supemon_tom_pierre\player_struct.c
 	"player_struct.h"
 
-1738426652 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
+1738506636 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
 
-1738426328 source:c:\supinfo\1c\supemon_tom_pierre\shop.c
+1738503561 source:c:\supinfo\1c\supemon_tom_pierre\shop.c
+	<stdio.h>
+	<stdlib.h>
 	"shop.h"
 
-1738426652 c:\supinfo\1c\supemon_tom_pierre\shop.h
+1738503577 c:\supinfo\1c\supemon_tom_pierre\shop.h
+
+1738426652 c:\supinfo\1c\supemon_tom_pierre\center.h
 
