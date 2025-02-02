@@ -5,14 +5,18 @@
 #include "player_struct.h"
 #include "center.h"
 
-// declaration des procedures avec des pointeurs sur over
 void choice_action(int *over);
 
 int main() {
-    int over = 0;
+    // ajout de tout les supemons
+    supemon supasaur;
+    supemon supertirtle;
+    // ajout du joueur
+    player one;
 
-    ask_name();
-    choice_supemon();
+
+
+    int over = 0;
 
     while(over == 0) {
         choice_action(&over);

@@ -2,13 +2,17 @@
 #include <stdlib.h>
 #include "player_struct.h"
 
-void ask_name(char *name) {
+#define MAX_NAME_LENGTH 50
+
+char ask_name() {
+    char* name;
+
     printf("+-------------------------------+\n");
     printf("|       Enter your name:        |\n");
     printf("+-------------------------------+\n");
-    fgets(name, MAX_NAME_LENGTH, stdin);
+    gets(name);
 
-    name[strcspn(name, "\n")] = 0;
+    return name;
 }
 
 void choice_supemon() {
@@ -28,7 +32,7 @@ void choice_supemon() {
     switch (choice) {
         case 1:
             printf("You chose Supmander! Good luck!\n");
-            printf("nice");
+            return "Supmander";
             break;
         case 2:
             printf("You chose Supasaur! Good luck!\n");
@@ -42,8 +46,10 @@ void choice_supemon() {
     }
 }
 
-void init_player(Player *player, const char *name) {
-    strcpy(player->name, name);
-    player->level = 1;
-    player->hp = 10;
+player one;
+
+void init_player() {
+    strcpy(one.name, ask_name());
+    //.selected_supemon = choice_supemon();
 }
+

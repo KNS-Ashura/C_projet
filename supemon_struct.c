@@ -28,7 +28,10 @@ void apply_move(supemon *pokemon, int move_id) {
     }
 }
 
+supemon supasaur;
+
 void init_supasaur() {
+
     strcpy(supasaur.name, "Supasaur");
     supasaur.level = 1;
     supasaur.experience = 0;
@@ -43,11 +46,9 @@ void init_supasaur() {
     supasaur.accuracy = 2;
     supasaur.base_accuracy = 2;
     supasaur.speed = 2;
-
-    // Initialisation des attaques
-    supasaur.moves[0] = 1; // Pound (deals 2 damage)
-    supasaur.moves[1] = 2; // Foliage (gives 1 Evasion)
 }
+
+supemon supertirtle;
 
 void init_supertirtle() {
     strcpy(supertirtle.name, "Supertirtle");
@@ -65,9 +66,4 @@ void init_supertirtle() {
     supertirtle.base_accuracy = 1;
     supertirtle.speed = 2;
 
-    // Initialisation des attaques
-    supertirtle.moves[0] = 1; // Pound (deals 2 damage)
-    supertirtle.moves[1] = 4; // Shell (gives 1 Defense)
-    supertirtle.moves[2] = 0; // Slot vide
-    supertirtle.moves[3] = 0; // Slot vide
 }

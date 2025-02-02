@@ -2,7 +2,7 @@
 #define SUPEMON_STRUCT_H_INCLUDED
 
 #define MAX_NAME_LENGTH 50
-#define MAX_MOVES 4  // Définit un maximum de 4 attaques par exemple
+#define MAX_MOVES 4
 
 typedef struct {
     char name[MAX_NAME_LENGTH];
