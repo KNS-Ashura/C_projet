@@ -4,6 +4,7 @@
 #include "supemon_struct.h"
 #include "player_struct.h"
 #include "center.h"
+#include "shop.h"
 
 void choice_action(int *over);
 
@@ -11,12 +12,11 @@ int main() {
     // ajout de tout les supemons
     supemon supasaur;
     supemon supertirtle;
-    // ajout du joueur
     player one;
 
-
-
     int over = 0;
+
+    init_player();
 
     while(over == 0) {
         choice_action(&over);

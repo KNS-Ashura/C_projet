@@ -1,7 +1,7 @@
 #ifndef PLAYER_STRUCT_H_INCLUDED
 #define PLAYER_STRUCT_H_INCLUDED
 
-void ask_name ();
+char* ask_name();
 void choice_supemon();
 
 typedef struct {

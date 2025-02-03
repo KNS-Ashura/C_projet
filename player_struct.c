@@ -4,7 +4,7 @@
 
 #define MAX_NAME_LENGTH 50
 
-char ask_name() {
+char* ask_name() {
     char* name;
 
     printf("+-------------------------------+\n");
@@ -49,7 +49,9 @@ void choice_supemon() {
 player one;
 
 void init_player() {
-    strcpy(one.name, ask_name());
-    //.selected_supemon = choice_supemon();
-}
+    printf("Initializing player...\n");
 
+    strcpy(one.name, ask_name()); // Assure-toi que `one.name` est alloué !
+
+    printf("Welcome, %s!\n", one.name);
+}
