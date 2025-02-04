@@ -30,4 +30,8 @@ typedef struct {
 
 } supemon;
 
+extern supemon supertirtle;
+extern supemon supasaur;
+extern supemon supmander;
+
 #endif // SUPEMON_STRUCT_H_INCLUDED

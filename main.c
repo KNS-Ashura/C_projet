@@ -10,13 +10,16 @@ void choice_action(int *over);
 
 int main() {
     // ajout de tout les supemons
-    supemon supasaur;
-    supemon supertirtle;
-    player one;
+    init_supertirtle();
+    init_supasaur();
+    init_supmander();
+    init_player();
+    choice_supemon();
+
+    printf(" %s" , one.supemon_list[0].name);
 
     int over = 0;
 
-    init_player();
 
     while(over == 0) {
         choice_action(&over);
@@ -47,9 +50,11 @@ void choice_action(int *over) {
             break;
         case 2:
             printf("In the shop!\n");
+            //open_shop();
             break;
         case 3:
             printf("In the supemon center!\n");
+            open_center();
             break;
         case 4:
             printf("Leaving the game!\n");

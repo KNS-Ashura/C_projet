@@ -5,12 +5,15 @@
 #define MAX_NAME_LENGTH 50
 
 char* ask_name() {
-    char* name;
+    static char name[50];
 
     printf("+-------------------------------+\n");
     printf("|       Enter your name:        |\n");
     printf("+-------------------------------+\n");
-    gets(name);
+    printf("-> ");
+
+    fgets(name, sizeof(name), stdin);
+    name[strcspn(name, "\n")] = 0;
 
     return name;
 }
@@ -32,13 +35,15 @@ void choice_supemon() {
     switch (choice) {
         case 1:
             printf("You chose Supmander! Good luck!\n");
-            return "Supmander";
+            add_supemon_to_player(1);
             break;
         case 2:
             printf("You chose Supasaur! Good luck!\n");
+            add_supemon_to_player(2);
             break;
         case 3:
             printf("You chose Suptirtle! Good luck!\n");
+            add_supemon_to_player(3);
             break;
         default:
             printf("Invalid choice, try again.\n");
@@ -49,9 +54,36 @@ void choice_supemon() {
 player one;
 
 void init_player() {
-    printf("Initializing player...\n");
 
-    strcpy(one.name, ask_name()); // Assure-toi que `one.name` est alloué !
-
+    strcpy(one.name, ask_name());
     printf("Welcome, %s!\n", one.name);
+
+    one.items_list[100][15];
+
+    one.supcoin = 0;
+
+    supemon supemon_list[3];
+
+    printf("you have %d supcoin\n" , one.supcoin);
+    one.selected_supemon = NULL;
+}
+
+void add_supemon_to_player(int choice) {
+    supemon selected;
+
+    // Choix du supemon en fonction du paramètre 'choice'
+    if (choice == 1) {
+        selected = supmander;
+    } else if (choice == 2) {
+        selected = supasaur;
+    } else if (choice == 3) {
+        selected = supertirtle;
+    } else {
+        printf("Choix invalide !\n");
+        return;
+    }
+
+    one.supemon_list[0] = selected;
+    printf("mise a jour effectuer");
+
 }
