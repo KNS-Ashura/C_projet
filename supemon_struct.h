@@ -19,8 +19,8 @@ typedef struct {
     short defense;
     short base_defense;
 
-    short evasion;
-    short base_evasion;
+    double evasion;
+    double base_evasion;
 
     short accuracy;
     short base_accuracy;
@@ -30,8 +30,16 @@ typedef struct {
 
 } supemon;
 
+void init_all_supemon();
+
 extern supemon supertirtle;
 extern supemon supasaur;
 extern supemon supmander;
+extern supemon  supachu;
+extern supemon  supabro;
+extern supemon  supaghost;
+extern supemon  supaflora;
+extern supemon  supadrill;
+extern supemon  supaflame;
 
 #endif // SUPEMON_STRUCT_H_INCLUDED

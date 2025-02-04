@@ -16,7 +16,7 @@ char* ask_name() {
     name[strcspn(name, "\n")] = 0;
 
     return name;
-}
+};
 
 void choice_supemon() {
     int choice;
@@ -49,7 +49,7 @@ void choice_supemon() {
             printf("Invalid choice, try again.\n");
             return;
     }
-}
+};
 
 player one;
 
@@ -66,12 +66,11 @@ void init_player() {
 
     printf("you have %d supcoin\n" , one.supcoin);
     one.selected_supemon = NULL;
-}
+};
 
 void add_supemon_to_player(int choice) {
     supemon selected;
 
-    // Choix du supemon en fonction du paramètre 'choice'
     if (choice == 1) {
         selected = supmander;
     } else if (choice == 2) {
@@ -80,10 +79,9 @@ void add_supemon_to_player(int choice) {
         selected = supertirtle;
     } else {
         printf("Choix invalide !\n");
-        return;
     }
 
-    one.supemon_list[0] = selected;
-    printf("mise a jour effectuer");
+    one.supemon_list[one.supemon_count] = selected;
+    one.supemon_count += 1;
 
-}
+};

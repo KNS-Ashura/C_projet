@@ -7,16 +7,14 @@
 #include "shop.h"
 
 void choice_action(int *over);
+int verif = 0;
 
 int main() {
-    // ajout de tout les supemons
-    init_supertirtle();
-    init_supasaur();
-    init_supmander();
+    // initialisation de plein de truc
+    init_all_supemon();
     init_player();
-    choice_supemon();
 
-    printf(" %s" , one.supemon_list[0].name);
+    choice_supemon();
 
     int over = 0;
 
@@ -27,7 +25,7 @@ int main() {
 
     printf("Game Over. Goodbye!\n");
     return 0;
-}
+};
 
 
 void choice_action(int *over) {
@@ -50,11 +48,11 @@ void choice_action(int *over) {
             break;
         case 2:
             printf("In the shop!\n");
-            //open_shop();
+            open_shop();
             break;
         case 3:
             printf("In the supemon center!\n");
-            open_center();
+            open_center(&verif);
             break;
         case 4:
             printf("Leaving the game!\n");
@@ -64,5 +62,5 @@ void choice_action(int *over) {
             printf("Invalid choice, try again.\n");
             break;
     }
-}
+};
 

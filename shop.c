@@ -30,8 +30,8 @@ void open_shop() {
     } else if (sell_or_buy == 2) {
         buy_items();
     } else {
-        printf("Exit\n");
-    }
+        printf("Exit\n\n");
+    }:
 }
 
 ///////////////////////SELL ITEMS MENU//////////////////////////////////
