@@ -9,59 +9,57 @@ supemon supachu;
 supemon supabro;
 supemon supaghost;
 supemon supaflora;
-supemon supadrill;
+supemon suponflex;
 supemon supaflame;
 
-void apply_move(supemon *pokemon, int move_id) {
+void apply_move(supemon *name, int move_id) {
     switch (move_id) {
 
-        // SUPMANDER
         case 1: // Scratch
-            printf("%s uses Scratch! A fast claw attack!\n", pokemon->name);
+            printf("%s uses Scratch! A fast claw attack!\n");
             // Appliquer des dégâts ici
             break;
 
         case 2: // Growl
-            printf("%s uses Growl! The opponent's attack is lowered!\n", pokemon->name);
+            printf("%s uses Growl! The opponent's attack is lowered!\n");
             // Modifier les stats de l'adversaire ici
             break;
 
-        case 3: // Ember
-            printf("%s uses Ember! A small flame is launched!\n", pokemon->name);
-            // Ajouter un effet de type Feu ici
-            break;
-
-        // SUPASAUR
-        case 4: // Pound
-            printf("%s uses Pound! A direct hit!\n", pokemon->name);
+        case 3: // Pound
+            printf("%s uses Pound! A direct hit!\n");
             // Appliquer des dégâts ici
             break;
 
-        case 5: // Vine Whip
-            printf("%s uses Vine Whip! The opponent is hit by vines!\n", pokemon->name);
-            // Ajouter un effet de type Plante ici
-            break;
-
-        case 6: // Leech Seed
-            printf("%s uses Leech Seed! The opponent's energy is drained!\n", pokemon->name);
-            // Ajouter un effet de vol de vie ici
-            break;
-
-        // SUPERTIRTLE
-        case 7: // Pound
-            printf("%s uses Pound! A direct hit!\n", pokemon->name);
-            // Appliquer des dégâts ici
-            break;
-
-        case 8: // Shell Defense
-            printf("%s uses Shell Defense! Defense is increased!\n", pokemon->name);
+        case 4: // Shell Defense
+            printf("%s uses Shell Defense! Defense is increased!\n");
             // Augmenter la défense ici
             break;
 
-        case 9: // Water Gun
-            printf("%s uses Water Gun! A blast of water is shot!\n", pokemon->name);
-            // Ajouter un effet de type Eau ici
+        case 5: // Folliage
+            printf("%s uses Folliage! Evasion is now increased!\n");
+            //
             break;
+
+        case 6: // Thunder
+            printf("%s uses Thunder! A big lightning bolt strikes the opponent!\n");
+            //
+            break;
+
+        case 7: // terror
+            printf("%s uses Terror! the opponent is losing is mind!\n");
+            //
+            break;
+
+        case 8: // natural heal
+            printf("%s uses Natural healing! He is recovering hp!\n");
+            //
+            break;
+
+        case 9: // Flamme
+            printf("%s throw a flamme! the opponents might be in fire!\n");
+            //
+            break;
+
 
         default:
             printf("Unknown move!\n");
@@ -76,7 +74,7 @@ void init_all_supemon() {
     init_supabro();
     init_supaghost();
     init_supaflora();
-    init_supadrill();
+    init_suponflex();
     init_supaflame();
 }
 
@@ -96,6 +94,10 @@ void init_supasaur() {
     supasaur.accuracy = 2;
     supasaur.base_accuracy = 2;
     supasaur.speed = 2;
+
+    supasaur.first_move = 3;
+    supasaur.second_move = 5;
+
 }
 
 void init_supertirtle() {
@@ -115,6 +117,8 @@ void init_supertirtle() {
     supertirtle.base_accuracy = 1;
     supertirtle.speed = 2;
 
+    supertirtle.first_move = 3;
+    supertirtle.second_move = 4;
 }
 
 void init_supmander() {
@@ -134,6 +138,9 @@ void init_supmander() {
     supmander.base_accuracy = 2;
     supmander.speed = 1;
 
+    supmander.first_move = 1;
+    supmander.second_move = 2;
+
 }
 
 void init_supachu() {
@@ -151,6 +158,9 @@ void init_supachu() {
     supachu.accuracy = 3;
     supachu.base_accuracy = 3;
     supachu.speed = 4;
+
+    supachu.first_move = 3;
+    supachu.second_move = 6;
 }
 
 void init_supabro() {
@@ -168,6 +178,10 @@ void init_supabro() {
     supabro.accuracy = 2;
     supabro.base_accuracy = 2;
     supabro.speed = 1;
+
+    supabro.first_move = 2;
+    supabro.second_move = 3;
+    supabro.third_move = 4;
 }
 
 void init_supaghost() {
@@ -185,6 +199,9 @@ void init_supaghost() {
     supaghost.accuracy = 3;
     supaghost.base_accuracy = 3;
     supaghost.speed = 3;
+
+    supaghost.first_move = 7;
+    supaghost.second_move = 5;
 }
 
 void init_supaflora() {
@@ -202,23 +219,28 @@ void init_supaflora() {
     supaflora.accuracy = 2;
     supaflora.base_accuracy = 2;
     supaflora.speed = 2;
+
+    supaflora.first_move = 1;
+    supaflora.second_move = 8;
 }
 
-void init_supadrill() {
-    strcpy(supadrill.name, "Supadrill");
-    supadrill.level = 1;
-    supadrill.experience = 0;
-    supadrill.hp = 10;
-    supadrill.max_hp = 10;
-    supadrill.attack = 3;
-    supadrill.base_attack = 3;
-    supadrill.defense = 1;
-    supadrill.base_defense = 1;
-    supadrill.evasion = 2;
-    supadrill.base_evasion = 2;
-    supadrill.accuracy = 2;
-    supadrill.base_accuracy = 2;
-    supadrill.speed = 3;
+void init_suponflex() {
+    strcpy(suponflex.name, "Suponflex");
+    suponflex.level = 1;
+    suponflex.experience = 0;
+    suponflex.hp = 14;
+    suponflex.max_hp = 14;
+    suponflex.attack = 5;
+    suponflex.base_attack = 5;
+    suponflex.defense = 1;
+    suponflex.base_defense = 1;
+    suponflex.evasion = 2;
+    suponflex.base_evasion = 2;
+    suponflex.accuracy = 2;
+    suponflex.base_accuracy = 2;
+    suponflex.speed = 3;
+
+    suponflex.first_move = 3;
 }
 
 void init_supaflame() {
@@ -236,5 +258,8 @@ void init_supaflame() {
     supaflame.accuracy = 3;
     supaflame.base_accuracy = 3;
     supaflame.speed = 4;
+
+    supaflame.first_move = 1;
+    supaflame.second_move = 9;
 }
 

@@ -12,15 +12,24 @@ int verif = 0;
 int main() {
     // initialisation de plein de truc
     init_all_supemon();
-    init_player();
-
+    init_one();
     choice_supemon();
 
     int over = 0;
 
+    if(one.mode == 1){
+        add_supemon_to_player(4);
+        add_supemon_to_player(5);
+        add_supemon_to_player(6);
+        add_supemon_to_player(7);
+        add_supemon_to_player(8);
+        add_supemon_to_player(9);
+
+    }
 
     while(over == 0) {
         choice_action(&over);
+        add_supemon_to_player(1);
     }
 
     printf("Game Over. Goodbye!\n");
@@ -41,7 +50,6 @@ void choice_action(int *over) {
     printf("+--------------------------------+\n");
     printf("Enter your choice (1, 2, 3 or 4): ");
     scanf("%d", &choice_place);
-
     switch (choice_place) {
         case 1:
             printf("Into the wild!\n");
@@ -63,4 +71,6 @@ void choice_action(int *over) {
             break;
     }
 };
+
+
 

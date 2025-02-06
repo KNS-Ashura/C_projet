@@ -53,35 +53,83 @@ void choice_supemon() {
 
 player one;
 
-void init_player() {
+void init_one() {
+    char temp_name[50];
+    strcpy(temp_name, ask_name());
+    strcpy(one.name, temp_name);
 
-    strcpy(one.name, ask_name());
     printf("Welcome, %s!\n", one.name);
 
-    one.items_list[100][15];
+    if (strcmp(temp_name, "admin") == 0) {
 
-    one.supcoin = 0;
+        printf("Access granted! You are the administrator.\n");
+        one.supcoin = 9999;
+        one.supemon_count = 0;
+        one.selected_supemon = NULL;
+        one.items_list[100][15];
+        one.mode = 1;
 
-    supemon supemon_list[3];
+    } else {
 
-    printf("you have %d supcoin\n" , one.supcoin);
-    one.selected_supemon = NULL;
-};
+        one.items_list[100][15];
+
+        one.supcoin = 0;
+        one.supemon_count = 0;
+
+        printf("You have %d supcoin\n", one.supcoin);
+        one.selected_supemon = NULL;
+        one.mode = 0;
+
+    }
+}
 
 void add_supemon_to_player(int choice) {
     supemon selected;
 
-    if (choice == 1) {
-        selected = supmander;
-    } else if (choice == 2) {
-        selected = supasaur;
-    } else if (choice == 3) {
-        selected = supertirtle;
-    } else {
-        printf("Choix invalide !\n");
+    switch(choice) {
+        case 1:
+            selected = supmander;
+            printf("supmander is now in your team");
+            break;
+
+        case 2:
+            selected = supasaur;
+            break;
+
+        case 3:
+            selected = supertirtle;
+            break;
+
+        case 4:
+            selected = supachu;
+            break;
+
+        case 5:
+            selected = supabro;
+            break;
+
+        case 6:
+            selected = supaghost;
+            break;
+
+        case 7:
+            selected = supaflora;
+            break;
+
+        case 8:
+            selected = suponflex;
+            break;
+
+        case 9:
+            selected = supaflame;
+            break;
+
+        default:
+            printf("Invalid choice, try again.\n");
+            return;
     }
 
     one.supemon_list[one.supemon_count] = selected;
-    one.supemon_count += 1;
+    one.supemon_count = one.supemon_count + 1;
 
 };

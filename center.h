@@ -5,7 +5,7 @@
 
 void open_center();
 
-void frist_choice();
+void first_choice();
 void second_choice();
 
 #endif // CENTER_H_INCLUDED

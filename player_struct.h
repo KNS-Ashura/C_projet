@@ -7,15 +7,17 @@
 char* ask_name();
 void choice_supemon();
 void add_supemon_to_player(int choice);
+void init_one();
 
 typedef struct {
 
     char name[50];
-    supemon supemon_list[3];
+    supemon supemon_list[9];
     int supemon_count;
     char selected_supemon;
     int supcoin;
     char items_list[100][15];
+    short mode;
 
 } player;
 

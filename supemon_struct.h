@@ -27,6 +27,8 @@ typedef struct {
 
     short speed;
 
+    short first_move,second_move,third_move;
+
 
 } supemon;
 
@@ -39,7 +41,7 @@ extern supemon  supachu;
 extern supemon  supabro;
 extern supemon  supaghost;
 extern supemon  supaflora;
-extern supemon  supadrill;
+extern supemon  suponflex;
 extern supemon  supaflame;
 
 #endif // SUPEMON_STRUCT_H_INCLUDED

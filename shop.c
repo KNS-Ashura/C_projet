@@ -31,7 +31,7 @@ void open_shop() {
         buy_items();
     } else {
         printf("Exit\n\n");
-    }:
+    }
 }
 
 ///////////////////////SELL ITEMS MENU//////////////////////////////////
