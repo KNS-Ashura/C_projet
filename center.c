@@ -67,8 +67,7 @@ void second_choice(){
             printf("=========================================================================================================\n");
     printf("your supemon are :\n\n");
 
-    for(int i = 0 ; i < 8; i++){
-            if(strcmp(one.supemon_list[i].name, "") != 0){
+    for(int i = 0 ; i < one.supemon_count - 1; i++){
                 printf("%s - Level : %hd, HP: %hd, Attack: %hd, Defense: %hd, Speed: %hd, Accuracy %hd, Evasion %lf id : |%d| \n",
                 one.supemon_list[i].name,
                 one.supemon_list[i].level,
@@ -80,8 +79,5 @@ void second_choice(){
                 one.supemon_list[i].evasion,
                 i);
             printf("=========================================================================================================\n");
-            }
-
-
     };
 }

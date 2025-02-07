@@ -56,7 +56,7 @@ void apply_move(supemon *name, int move_id) {
             break;
 
         case 9: // Flamme
-            printf("%s throw a flamme! the opponents might be in fire!\n");
+            printf("%s throw a flamme ! the opponents might be in fire!\n");
             //
             break;
 

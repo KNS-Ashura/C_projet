@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1738836335 source:c:\supinfo\1c\supemon_tom_pierre\main.c
+1738853921 source:c:\supinfo\1c\supemon_tom_pierre\main.c
 	<stdio.h>
 	<stdlib.h>
 	"shop.h"
@@ -7,33 +7,35 @@
 	"player_struct.h"
 	"center.h"
 	"shop.h"
+	"item_struct.h"
 
 1738420657 c:\supinfo\1c\supemon_tom_pierre\structures.h
 
-1738757387 source:c:\supinfo\1c\supemon_tom_pierre\supemon_struct.c
+1738848614 source:c:\supinfo\1c\supemon_tom_pierre\supemon_struct.c
 	<stdio.h>
 	<stdlib.h>
 	"supemon_struct.h"
 
 1738757399 c:\supinfo\1c\supemon_tom_pierre\supemon_struct.h
 
-1738836242 source:c:\supinfo\1c\supemon_tom_pierre\center.c
+1738876614 source:c:\supinfo\1c\supemon_tom_pierre\center.c
 	<stdio.h>
 	<stdlib.h>
 	"center.h"
 	"supemon_struct.h"
 	"player_struct.h"
 
-1738836083 source:c:\supinfo\1c\supemon_tom_pierre\player_struct.c
+1738848898 source:c:\supinfo\1c\supemon_tom_pierre\player_struct.c
 	<stdio.h>
 	<stdlib.h>
 	"player_struct.h"
 
-1738836434 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
+1738848788 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
 	"supemon_struct.h"
+	"item_struct.h"
 	<string.h>
 
-1738702976 source:c:\supinfo\1c\supemon_tom_pierre\shop.c
+1738853542 source:c:\supinfo\1c\supemon_tom_pierre\shop.c
 	<stdio.h>
 	<stdlib.h>
 	"shop.h"
@@ -42,9 +44,17 @@
 	<string.h>
 	"shop.h"
 	"player_struct.h"
+	"item_struct.h"
 
-1738662687 c:\supinfo\1c\supemon_tom_pierre\shop.h
+1738851894 c:\supinfo\1c\supemon_tom_pierre\shop.h
 
 1738766558 c:\supinfo\1c\supemon_tom_pierre\center.h
 	"supemon_struct.h"
+
+1738851318 source:c:\supinfo\1c\supemon_tom_pierre\item_struct.c
+	<stdio.h>
+	<stdlib.h>
+	"item_struct.h"
+
+1738851222 c:\supinfo\1c\supemon_tom_pierre\item_struct.h
 

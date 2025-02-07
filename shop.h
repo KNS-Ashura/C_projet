@@ -4,5 +4,6 @@
 void open_shop();
 void sell_items();
 void buy_items();
+void remove_item();
 
 #endif // SHOP_H_INCLUDED

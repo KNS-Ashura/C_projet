@@ -66,20 +66,16 @@ void init_one() {
         one.supcoin = 9999;
         one.supemon_count = 0;
         one.selected_supemon = NULL;
-        one.items_list[100][15];
         one.mode = 1;
+        one.item_count=0;
 
     } else {
 
-        one.items_list[100][15];
-
         one.supcoin = 0;
         one.supemon_count = 0;
-
-        printf("You have %d supcoin\n", one.supcoin);
         one.selected_supemon = NULL;
         one.mode = 0;
-
+        one.item_count=0;
     }
 }
 
@@ -89,39 +85,47 @@ void add_supemon_to_player(int choice) {
     switch(choice) {
         case 1:
             selected = supmander;
-            printf("supmander is now in your team");
+            printf("supmander is now in your team \n");
             break;
 
         case 2:
             selected = supasaur;
+            printf("supasaur is now in your team \n");
             break;
 
         case 3:
             selected = supertirtle;
+            printf("supertirtle is now in your team \n");
             break;
 
         case 4:
             selected = supachu;
+            printf("supachu is now in your team \n");
             break;
 
         case 5:
             selected = supabro;
+            printf("supabro is now in your team \n");
             break;
 
         case 6:
             selected = supaghost;
+            printf("supaghost is now in your team \n");
             break;
 
         case 7:
             selected = supaflora;
+            printf("supaflora is now in your team \n");
             break;
 
         case 8:
             selected = suponflex;
+            printf("suponflex is now in your team \n");
             break;
 
         case 9:
             selected = supaflame;
+            printf("supaflame is now in your team \n");
             break;
 
         default:

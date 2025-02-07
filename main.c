@@ -5,15 +5,19 @@
 #include "player_struct.h"
 #include "center.h"
 #include "shop.h"
+#include "item_struct.h"
 
 void choice_action(int *over);
 int verif = 0;
+int verif2 = 0;
 
 int main() {
     // initialisation de plein de truc
     init_all_supemon();
+    init_all_item();
     init_one();
     choice_supemon();
+    //bonjour
 
     int over = 0;
 
@@ -29,7 +33,6 @@ int main() {
 
     while(over == 0) {
         choice_action(&over);
-        add_supemon_to_player(1);
     }
 
     printf("Game Over. Goodbye!\n");
@@ -53,10 +56,11 @@ void choice_action(int *over) {
     switch (choice_place) {
         case 1:
             printf("Into the wild!\n");
+            pitidino();
             break;
         case 2:
             printf("In the shop!\n");
-            open_shop();
+            open_shop(&verif2);
             break;
         case 3:
             printf("In the supemon center!\n");
@@ -71,6 +75,25 @@ void choice_action(int *over) {
             break;
     }
 };
+//////////////////////////////////// DECORATIONS
+
+void pitidino() {
+    printf("                       .       .\n");
+    printf("                    / .   .' \"\n");
+    printf("            .---.  <    > <    >  .---.\n");
+    printf("            |    \\  \\ - ~ ~ - /  /    |\n");
+    printf("    _____          ..-~             ~-..-~\n");
+    printf("   |     |   \\~~~\\.'                    ./~/\n");
+    printf("  ---------   \/                        \/\n");
+    printf(" .'  O    \     /               /       \  \n");
+    printf(" (__,    `..'               |         }  \/~/\n");
+    printf("  ----.          /       }     |        /    \\__/\n");
+    printf("        -.      |       /      |       /      . ,~~|\n");
+    printf("            ~-.__|      /_ - ~ ^|      /- _      ..-'   \n");
+    printf("                 |     /        |     /     ~-.     `-.     \n");
+    printf("                 |__|        |__|         ~ - .     >\n");
+
+}
 
 
 
