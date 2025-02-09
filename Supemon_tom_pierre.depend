@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1738853921 source:c:\supinfo\1c\supemon_tom_pierre\main.c
+1739099216 source:c:\supinfo\1c\supemon_tom_pierre\main.c
 	<stdio.h>
 	<stdlib.h>
 	"shop.h"
@@ -8,6 +8,7 @@
 	"center.h"
 	"shop.h"
 	"item_struct.h"
+	"wild_function.h"
 
 1738420657 c:\supinfo\1c\supemon_tom_pierre\structures.h
 
@@ -18,19 +19,19 @@
 
 1738757399 c:\supinfo\1c\supemon_tom_pierre\supemon_struct.h
 
-1738876614 source:c:\supinfo\1c\supemon_tom_pierre\center.c
+1739097780 source:c:\supinfo\1c\supemon_tom_pierre\center.c
 	<stdio.h>
 	<stdlib.h>
 	"center.h"
 	"supemon_struct.h"
 	"player_struct.h"
 
-1738848898 source:c:\supinfo\1c\supemon_tom_pierre\player_struct.c
+1739045615 source:c:\supinfo\1c\supemon_tom_pierre\player_struct.c
 	<stdio.h>
 	<stdlib.h>
 	"player_struct.h"
 
-1738848788 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
+1739045341 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
 	"supemon_struct.h"
 	"item_struct.h"
 	<string.h>
@@ -57,4 +58,12 @@
 	"item_struct.h"
 
 1738851222 c:\supinfo\1c\supemon_tom_pierre\item_struct.h
+
+1739099087 c:\supinfo\1c\supemon_tom_pierre\wild_function.h
+
+1739099334 source:c:\supinfo\1c\supemon_tom_pierre\wild_function.c
+	<stdio.h>
+	<stdlib.h>
+	"supemon_struct.h"
+	"wild_function.h"
 

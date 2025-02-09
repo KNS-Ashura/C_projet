@@ -9,6 +9,7 @@ char* ask_name();
 void choice_supemon();
 void add_supemon_to_player(int choice);
 void init_one();
+void select_supemon();
 
 typedef struct {
 
@@ -16,7 +17,7 @@ typedef struct {
     supemon supemon_list[9];
     item item_list[10];
     int supemon_count;
-    char selected_supemon;
+    supemon choosen_supemon[1];
     int supcoin;
     short mode;
     short item_count;

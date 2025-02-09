@@ -6,18 +6,19 @@
 #include "center.h"
 #include "shop.h"
 #include "item_struct.h"
+#include "wild_function.h"
 
 void choice_action(int *over);
-int verif = 0;
-int verif2 = 0;
+void pitidino();
 
 int main() {
     // initialisation de plein de truc
     init_all_supemon();
     init_all_item();
     init_one();
+    init_master();
+
     choice_supemon();
-    //bonjour
 
     int over = 0;
 
@@ -57,14 +58,16 @@ void choice_action(int *over) {
         case 1:
             printf("Into the wild!\n");
             pitidino();
+            main_wild_funct();
+            select_supemon();
             break;
         case 2:
             printf("In the shop!\n");
-            open_shop(&verif2);
+            open_shop();
             break;
         case 3:
             printf("In the supemon center!\n");
-            open_center(&verif);
+            open_center();
             break;
         case 4:
             printf("Leaving the game!\n");
