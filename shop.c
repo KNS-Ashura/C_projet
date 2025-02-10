@@ -51,7 +51,7 @@ void sell_items() {
         return;
     }
 
-    printf("You choose a %s. Are you sure you want to sell it for %d supcoins? (1 = YES, 2 = NO):\n",
+    printf("You choose a %s. Are you sure you want to sell it for %d supcoins? (1 = YES, 2 = NO):",
            one.item_list[select_item].name,
            one.item_list[select_item].selling_value);
 
@@ -68,7 +68,6 @@ void sell_items() {
 void buy_items(int *verif2) {
 
     int item_choice;
-
     item selected;
 
     printf("Hey, which item do you want? Here is the list: \n");
@@ -88,38 +87,48 @@ void buy_items(int *verif2) {
 
     switch (item_choice) {
         case 1:
-            if (one.supcoin >= 100){
-                selected=potion;
-                one.supcoin-=100;
-                printf("You buy a potion \n");
+            if (one.supcoin >= 100) {
+                selected = potion;
+                one.supcoin -= 100;
+                printf("You bought a potion.\n");
+                one.item_list[one.item_count] = selected;
+                one.item_count++;
+            } else {
+                printf("Not enough supcoins!\n");
             }
             break;
         case 2:
-            if (one.supcoin >= 300){
-                selected=super_potion;
-                one.supcoin-=300;
-                printf("You buy a super potion \n");
+            if (one.supcoin >= 300) {
+                selected = super_potion;
+                one.supcoin -= 300;
+                printf("You bought a super potion.\n");
+                one.item_list[one.item_count] = selected;
+                one.item_count++;
+            } else {
+                printf("Not enough supcoins!\n");
             }
             break;
         case 3:
-            if (one.supcoin >= 700){
-                selected=rare_candy;
-                one.supcoin-=700;
-                printf("You buy a rare candy \n");
+            if (one.supcoin >= 700) {
+                selected = rare_candy;
+                one.supcoin -= 700;
+                printf("You bought a rare candy.\n");
+                one.item_list[one.item_count] = selected;
+                one.item_count++;
+            } else {
+                printf("Not enough supcoins!\n");
             }
             break;
         case 4:
             open_shop();
-            break;
+            return;
         case 5:
             return;
-            break;
         default:
+            printf("Invalid choice. Try again.\n");
             break;
-
     }
-    one.item_list[one.item_count]=selected;
-    one.item_count = one.item_count+1;
+
     open_shop(0);
 }
 void show_inventory() {

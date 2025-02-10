@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1739099216 source:c:\supinfo\1c\supemon_tom_pierre\main.c
+1739144205 source:c:\supinfo\1c\supemon_tom_pierre\main.c
 	<stdio.h>
 	<stdlib.h>
 	"shop.h"
@@ -9,34 +9,35 @@
 	"shop.h"
 	"item_struct.h"
 	"wild_function.h"
+	"fight.h"
 
 1738420657 c:\supinfo\1c\supemon_tom_pierre\structures.h
 
-1738848614 source:c:\supinfo\1c\supemon_tom_pierre\supemon_struct.c
+1739101445 source:c:\supinfo\1c\supemon_tom_pierre\supemon_struct.c
 	<stdio.h>
 	<stdlib.h>
 	"supemon_struct.h"
 
-1738757399 c:\supinfo\1c\supemon_tom_pierre\supemon_struct.h
+1739144508 c:\supinfo\1c\supemon_tom_pierre\supemon_struct.h
 
-1739097780 source:c:\supinfo\1c\supemon_tom_pierre\center.c
+1739101445 source:c:\supinfo\1c\supemon_tom_pierre\center.c
 	<stdio.h>
 	<stdlib.h>
 	"center.h"
 	"supemon_struct.h"
 	"player_struct.h"
 
-1739045615 source:c:\supinfo\1c\supemon_tom_pierre\player_struct.c
+1739145651 source:c:\supinfo\1c\supemon_tom_pierre\player_struct.c
 	<stdio.h>
 	<stdlib.h>
 	"player_struct.h"
 
-1739045341 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
+1739101445 c:\supinfo\1c\supemon_tom_pierre\player_struct.h
 	"supemon_struct.h"
 	"item_struct.h"
 	<string.h>
 
-1738853542 source:c:\supinfo\1c\supemon_tom_pierre\shop.c
+1739110504 source:c:\supinfo\1c\supemon_tom_pierre\shop.c
 	<stdio.h>
 	<stdlib.h>
 	"shop.h"
@@ -47,23 +48,35 @@
 	"player_struct.h"
 	"item_struct.h"
 
-1738851894 c:\supinfo\1c\supemon_tom_pierre\shop.h
+1739145423 c:\supinfo\1c\supemon_tom_pierre\shop.h
 
-1738766558 c:\supinfo\1c\supemon_tom_pierre\center.h
+1739101445 c:\supinfo\1c\supemon_tom_pierre\center.h
 	"supemon_struct.h"
 
-1738851318 source:c:\supinfo\1c\supemon_tom_pierre\item_struct.c
+1739101445 source:c:\supinfo\1c\supemon_tom_pierre\item_struct.c
 	<stdio.h>
 	<stdlib.h>
 	"item_struct.h"
 
-1738851222 c:\supinfo\1c\supemon_tom_pierre\item_struct.h
+1739101445 c:\supinfo\1c\supemon_tom_pierre\item_struct.h
 
-1739099087 c:\supinfo\1c\supemon_tom_pierre\wild_function.h
+1739133993 c:\supinfo\1c\supemon_tom_pierre\wild_function.h
+	"supemon_struct.h"
 
-1739099334 source:c:\supinfo\1c\supemon_tom_pierre\wild_function.c
+1739134192 source:c:\supinfo\1c\supemon_tom_pierre\wild_function.c
 	<stdio.h>
 	<stdlib.h>
 	"supemon_struct.h"
 	"wild_function.h"
+
+1739145394 source:c:\supinfo\1c\supemon_tom_pierre\fight.c
+	<stdio.h>
+	<stdlib.h>
+	"fight.h"
+	"wild_function.h"
+	"player_struct.h"
+	"item_struct.h"
+	"shop.h"
+
+1739143818 c:\supinfo\1c\supemon_tom_pierre\fight.h
 

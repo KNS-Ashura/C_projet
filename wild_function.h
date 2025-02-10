@@ -1,6 +1,8 @@
 #ifndef WILD_FUNCTION_H_INCLUDED
 #define WILD_FUNCTION_H_INCLUDED
 
+#include "supemon_struct.h"
+
 void main_wild_funct();
 
 typedef struct{

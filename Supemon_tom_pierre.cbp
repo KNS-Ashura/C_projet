@@ -35,6 +35,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="center.h" />
+		<Unit filename="fight.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="fight.h" />
 		<Unit filename="item_struct.c">
 			<Option compilerVar="CC" />
 		</Unit>

@@ -7,9 +7,9 @@
 #include "shop.h"
 #include "item_struct.h"
 #include "wild_function.h"
+#include "fight.h"
 
 void choice_action(int *over);
-void pitidino();
 
 int main() {
     // initialisation de plein de truc
@@ -18,11 +18,14 @@ int main() {
     init_one();
     init_master();
 
-    choice_supemon();
+
 
     int over = 0;
 
     if(one.mode == 1){
+        add_supemon_to_player(1);
+        add_supemon_to_player(2);
+        add_supemon_to_player(3);
         add_supemon_to_player(4);
         add_supemon_to_player(5);
         add_supemon_to_player(6);
@@ -30,6 +33,8 @@ int main() {
         add_supemon_to_player(8);
         add_supemon_to_player(9);
 
+    }else if(one.mode != 1){
+        choice_supemon();
     }
 
     while(over == 0) {
@@ -57,9 +62,14 @@ void choice_action(int *over) {
     switch (choice_place) {
         case 1:
             printf("Into the wild!\n");
-            pitidino();
             main_wild_funct();
             select_supemon();
+
+            while(1 == 1){
+            display_fight();
+            display_choice();
+            }
+
             break;
         case 2:
             printf("In the shop!\n");
@@ -79,24 +89,5 @@ void choice_action(int *over) {
     }
 };
 //////////////////////////////////// DECORATIONS
-
-void pitidino() {
-    printf("                       .       .\n");
-    printf("                    / .   .' \"\n");
-    printf("            .---.  <    > <    >  .---.\n");
-    printf("            |    \\  \\ - ~ ~ - /  /    |\n");
-    printf("    _____          ..-~             ~-..-~\n");
-    printf("   |     |   \\~~~\\.'                    ./~/\n");
-    printf("  ---------   \/                        \/\n");
-    printf(" .'  O    \     /               /       \  \n");
-    printf(" (__,    `..'               |         }  \/~/\n");
-    printf("  ----.          /       }     |        /    \\__/\n");
-    printf("        -.      |       /      |       /      . ,~~|\n");
-    printf("            ~-.__|      /_ - ~ ^|      /- _      ..-'   \n");
-    printf("                 |     /        |     /     ~-.     `-.     \n");
-    printf("                 |__|        |__|         ~ - .     >\n");
-
-}
-
 
 

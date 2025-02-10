@@ -83,7 +83,7 @@ void add_supemon_to_player(int choice) {
     switch(choice) {
         case 1:
             selected = supmander;
-            printf("supmander is now in your team \n");
+            printf("supmander is now in your team\n");
             break;
 
         case 2:
@@ -152,13 +152,14 @@ void select_supemon(){
                 one.supemon_list[i].speed,
                 one.supemon_list[i].accuracy,
                 one.supemon_list[i].evasion,
-                i);
+                i+1);
             printf("=========================================================================================================\n");
     };
 
 short selection;
 printf("Enter the id of the supemon you want to select: ");
 scanf(" %hd", &selection);
+selection -= 1;
 
 short agreement;
 printf("You choose %s. Are you sure? (1 = YES, 2 = NO): ", one.supemon_list[selection].name);
@@ -170,7 +171,7 @@ if (agreement == 1) {
     // Copier le nom explicitement
     strcpy(one.choosen_supemon[0].name, one.supemon_list[selection].name);
 
-    printf("%s is ready for this challenge!\n", one.choosen_supemon[0].name);
+    printf("%s is ready for this challenge!\n\n", one.choosen_supemon[0].name);
 } else if (agreement == 2) {
     printf("Please choose a new supemon\n");
     select_supemon();

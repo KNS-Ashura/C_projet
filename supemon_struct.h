@@ -5,6 +5,13 @@
 #define MAX_MOVES 4
 
 typedef struct {
+    char name[20];
+    short damage;
+    short attack_augment;
+    short defense_augment;
+} moves;
+
+typedef struct {
     char name[MAX_NAME_LENGTH];
     short level;
 
@@ -19,8 +26,8 @@ typedef struct {
     short defense;
     short base_defense;
 
-    double evasion;
-    double base_evasion;
+    float evasion;
+    float base_evasion;
 
     short accuracy;
     short base_accuracy;
