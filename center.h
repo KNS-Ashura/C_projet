@@ -5,7 +5,9 @@
 
 void open_center();
 
-void first_choice();
-void second_choice();
+void display_supodeck();
+void heal_supemon();
+
+
 
 #endif // CENTER_H_INCLUDED

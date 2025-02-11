@@ -13,7 +13,7 @@ void choice_action(int *over);
 
 int main() {
     // initialisation de plein de truc
-    init_all_supemon();
+    init_all_supemon_and_moves();
     init_all_item();
     init_one();
     init_master();
@@ -63,13 +63,6 @@ void choice_action(int *over) {
         case 1:
             printf("Into the wild!\n");
             main_wild_funct();
-            select_supemon();
-
-            while(1 == 1){
-            display_fight();
-            display_choice();
-            }
-
             break;
         case 2:
             printf("In the shop!\n");

@@ -155,3 +155,40 @@ void remove_item(int index) {
 
     one.item_count--;
 }
+
+void level_up_with_rare_candy(supemon *selected) {
+    selected->level++; // Augmente le niveau
+
+    // Augmentation de 30% pour chaque statistique
+    double stats[] = {
+        selected->max_hp,
+        selected->base_attack,
+        selected->base_defense,
+        selected->base_accuracy,
+        selected->speed
+    };
+
+    int num_stats = sizeof(stats) / sizeof(stats[0]);
+
+    for (int i = 0; i < num_stats; i++) {
+        double new_value = stats[i] * 1.3;
+        // 50% de chance d'arrondir vers le bas ou vers le haut
+        stats[i] = (rand() % 2 == 0) ? floor(new_value) : ceil(new_value);
+    }
+
+    // Appliquer les nouvelles valeurs aux bonnes variables
+    selected->max_hp = (int)stats[0];
+    selected->base_attack = (int)stats[1];
+    selected->base_defense = (int)stats[2];
+    selected->base_accuracy = (int)stats[3];
+    selected->speed = (int)stats[4];
+
+    // Mettre à jour les valeurs dérivées
+    selected->hp = selected->max_hp;
+    selected->attack = selected->base_attack;
+    selected->defense = selected->base_defense;
+    selected->accuracy = selected->base_accuracy;
+    selected->evasion = selected->base_evasion; // Supposé ne pas changer avec le level-up
+
+    printf("%s leveled up to %d!\n", selected->name, selected->level);
+}

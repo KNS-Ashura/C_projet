@@ -31,21 +31,35 @@ void main_wild_funct(){
         case 1:
             printf("you are now going next to the lake\n");
             spawn_supemon_in_lake(generate_random_number(1,3));
+            select_supemon();
+            while(1 == 1){
+            display_fight();
+            display_choice();
+            }
             break;
 
         case 2:
             printf("you walk in direction of the volcano\n");
             spawn_supemon_in_volcano(generate_random_number(1,3));
+            select_supemon();
+            while(1 == 1){
+            display_fight();
+            display_choice();
+            }
             break;
 
         case 3:
             printf("you enter in the forest\n");
             spawn_supemon_in_forest(generate_random_number(1,3));
+            select_supemon();
+            while(1 == 1){
+            display_fight();
+            display_choice();
+            }
             break;
 
         case 4:
             printf("you are now entering the village\n");
-            return;
             break;
 
         default :

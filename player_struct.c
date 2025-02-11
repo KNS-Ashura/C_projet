@@ -138,48 +138,29 @@ void add_supemon_to_player(int choice) {
 
 
 void select_supemon(){
-    short i = 0;
-    printf("=========================================================================================================\n");
-    printf("your supemon are :\n\n");
 
-    for(i ; i < one.supemon_count; i++){
-                printf("%s - Level : %hd, HP: %hd, Attack: %hd, Defense: %hd, Speed: %hd, Accuracy %hd, Evasion %lf id : |%d| \n",
-                one.supemon_list[i].name,
-                one.supemon_list[i].level,
-                one.supemon_list[i].hp,
-                one.supemon_list[i].attack,
-                one.supemon_list[i].defense,
-                one.supemon_list[i].speed,
-                one.supemon_list[i].accuracy,
-                one.supemon_list[i].evasion,
-                i+1);
-            printf("=========================================================================================================\n");
-    };
+    display_supemon();
 
-short selection;
-printf("Enter the id of the supemon you want to select: ");
-scanf(" %hd", &selection);
-selection -= 1;
+    short selection;
+    printf("Enter the id of the supemon you want to select: ");
+    scanf(" %hd", &selection);
+    selection -= 1;
 
-short agreement;
-printf("You choose %s. Are you sure? (1 = YES, 2 = NO): ", one.supemon_list[selection].name);
-scanf(" %hd", &agreement);
+    short agreement;
+    printf("You choose %s. Are you sure? (1 = YES, 2 = NO): ", one.supemon_list[selection].name);
+    scanf(" %hd", &agreement);
 
-if (agreement == 1) {
-    // Copier le Supemon sélectionné dans choosen_supemon
-    one.choosen_supemon[0] = one.supemon_list[selection];
-    // Copier le nom explicitement
-    strcpy(one.choosen_supemon[0].name, one.supemon_list[selection].name);
+    if (agreement == 1) {
+        // Copier le Supemon sélectionné dans choosen_supemon
+        one.choosen_supemon[0] = one.supemon_list[selection];
+        // Copier le nom explicitement
+        strcpy(one.choosen_supemon[0].name, one.supemon_list[selection].name);
 
-    printf("%s is ready for this challenge!\n\n", one.choosen_supemon[0].name);
-} else if (agreement == 2) {
-    printf("Please choose a new supemon\n");
-    select_supemon();
-} else {
-    printf("Wrong number\n");
-}
-
-
-
-
+        printf("%s is ready for this challenge!\n\n", one.choosen_supemon[0].name);
+    } else if (agreement == 2) {
+        printf("Please choose a new supemon\n");
+        select_supemon();
+    } else {
+        printf("Wrong number\n");
+    }
 }

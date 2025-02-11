@@ -22,6 +22,8 @@ typedef struct {
     short mode;
     short item_count;
 
+
+
 } player;
 
 extern player one;

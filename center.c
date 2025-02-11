@@ -4,6 +4,7 @@
 #include "supemon_struct.h"
 #include "player_struct.h"
 
+
 extern player one;
 void init_one();
 
@@ -23,9 +24,9 @@ void open_center(){
         printf("\n");
 
     if(center_choice == 1){
-        first_choice();
+        display_supodeck();
     }else if(center_choice == 2){
-        second_choice();
+        heal_supemon();
     }else{
         printf("EXIT\n\n");
         return;
@@ -34,7 +35,7 @@ void open_center(){
 }
 
 
-void first_choice(){
+void display_supodeck(){
 
     supemon all_supemon[9] = { supertirtle,
                                supasaur,
@@ -53,21 +54,26 @@ void first_choice(){
     };
 }
 
-void second_choice(){
-            printf("=========================================================================================================\n");
-    printf("your supemon are :\n\n");
+void heal_supemon(){
 
-    for(int i = 0 ; i < one.supemon_count; i++){
-                printf("%s - Level : %hd, HP: %hd, Attack: %hd, Defense: %hd, Speed: %hd, Accuracy %hd, Evasion %lf id : |%d| \n",
-                one.supemon_list[i].name,
-                one.supemon_list[i].level,
-                one.supemon_list[i].hp,
-                one.supemon_list[i].attack,
-                one.supemon_list[i].defense,
-                one.supemon_list[i].speed,
-                one.supemon_list[i].accuracy,
-                one.supemon_list[i].evasion,
-                i);
-            printf("=========================================================================================================\n");
-    };
+    display_supemon();
+
+    short selection;
+    printf("Enter the id of the supemon you want to heal: ");
+    scanf(" %hd", &selection);
+    selection -= 1;
+
+    short agreement;
+    printf("You choose %s. Are you sure? (1 = YES, 2 = NO): ", one.supemon_list[selection].name);
+    scanf(" %hd", &agreement);
+
+    if (agreement == 1) {
+        one.supemon_list[selection].hp = one.supemon_list[selection].max_hp;
+        printf("%s is now healed!\n\n", one.supemon_list[selection].name);
+    } else if (agreement == 2) {
+        printf("Please choose a new supemon\n");
+        heal_supemon();
+    } else {
+    printf("Wrong number\n");
+    }
 }

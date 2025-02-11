@@ -27,8 +27,9 @@ void init_super_potion() {
 }
 
 void init_rare_candy() {
-    rare_candy.hp = 10;  // ✅ Correction ici
+    rare_candy.hp = 0;  // ✅ Correction ici
     rare_candy.level = 0;
     strcpy(rare_candy.name, "Rare Candy");
     rare_candy.selling_value = 350;
+
 }

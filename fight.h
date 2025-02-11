@@ -4,5 +4,6 @@
 void display_fight();
 void display_choice();
 void select_items();
+void display_moves();
 
 #endif
